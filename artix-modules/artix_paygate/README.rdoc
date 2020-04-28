@@ -1,0 +1,4 @@
+=== Описание
+Настройка модуля "Платежи"
+
+Документация: http://docs.artix.su/pages/viewpage.action?pageId=13435549

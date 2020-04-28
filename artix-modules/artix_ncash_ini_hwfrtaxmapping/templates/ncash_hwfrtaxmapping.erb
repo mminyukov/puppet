@@ -1,0 +1,14 @@
+;-- Файл был сгенерирован сервером puppet
+;[HW.FR.TaxMapping]
+;
+; Соотнесение кодов налогов в ФР и кодов налогов в кассе
+; <Код налога в ФР> = <Код налога в кассе>
+;
+
+<% @hwfrtaxmapping.each do |hwfrtaxmap| -%>
+<%= hwfrtaxmap %>
+<% end -%>
+
+; Запрет добавления позиции в чек, если у товара не задан налог или нет маппинга налогов
+; По умолчанию false
+addPositionWithTaxMappingOnly = <%= @addPositionWithTaxMappingOnly %>

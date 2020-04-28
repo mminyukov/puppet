@@ -1,0 +1,137 @@
+;-- Файл был сгенерирован сервером puppet
+[Security.Restrictions]
+;
+; Параметры относящиеся к безопасности
+;
+
+; Адрес для дополнительной регистрации карты
+additionalRegistrationCardAddress = "<%= @additionalRegistrationCardAddress %>"
+
+; URL сервиса верификации карты
+cardVerificationUrl = "<%= @cardVerificationUrl %>"
+
+; Таймаут(в секундах) ожидания сообщения от сервера на запрос верификации карты
+; По умолчанию 5 секунд
+cardVerificationTimeout = <%= @cardVerificationTimeout %>
+
+; Минимальное количество
+; По умолчанию 0.001
+minQuant = <%= @minQuant %>;
+
+; запрет возврата суммой в чеке продажи
+; По умолчанию false
+disableBackInDeptInSale = <%= @disableBackInDeptInSale %>
+
+; запрет регистрации позиции с нулевой ценой
+; По умолчанию true
+disableZeroPrice = <%= @disableZeroPrice %>
+
+; Подтверждение прав по положению клавиатурного ключа
+; По умолчанию false
+authenticateByKeyboardKey = <%= @authenticateByKeyboardKey %>
+
+; Таймаут комбинаций клавиш клавиатурного ключа, в миллисекундах. По-умолчанию 100 мс.
+keyboardKeyTimeout = <%= @keyboardKeyTimeout %>;
+
+; Комбинации клавиш для каждого положения ключа
+
+keyboardKey0 = "<%= @keyboardKey0 %>"
+keyboardKey1 = "<%= @keyboardKey1 %>"
+keyboardKey2 = "<%= @keyboardKey2 %>"
+keyboardKey3 = "<%= @keyboardKey3 %>"
+keyboardKey4 = "<%= @keyboardKey4 %>"
+keyboardKey5 = "<%= @keyboardKey5 %>"
+
+
+; проверка суммы в денежном ящике
+; по умолчанию false
+checkCashSum = <%= @checkCashSum %>
+
+; значение суммы в денежном ящике
+; после превышения которого происходит блокирование
+; режима формирования документов
+; по умолчанию 100000
+maxCashSum = <%= @maxCashSum %>
+
+; значение суммы в в денежном ящике
+; после превышения которого будет происходить.
+; вывод предупреждающего сообщения перед каждым формированием чека
+; по умолчанию 95000
+dangerousCashSum = <%= @dangerousCashSum %>
+
+; Разрешать выполнение нескольких возвратов по одному чеку
+; по-умолчанию true
+allowSeveralBackBySale = <%= @allowSeveralBackBySale %>
+
+; Запрещать возврат, если недостаточно выручки
+; по умолчанию false
+denyBackIfDeficiencySumGain = <%= @denyBackIfDeficiencySumGain %>
+
+; Минимальная допустимая длина пароля. Если 0 - то длина пароля программой не ограничена
+; По умолчанию 0
+minPasswordLength = <%= @minPasswordLength %>
+
+; Подтверждение сторнирования позиции или всего чека другим пользователем
+; По умолчанию false
+alwaysConfirmStorno = <%= @alwaysConfirmStorno %>
+
+; Подтверждение сторнирования безналичной оплаты другим пользователем
+; По умолчанию false
+alwaysConfirmProcessingStorno = <%= @alwaysConfirmProcessingStorno %>
+
+; Проверять наличие у пользователя доступа к работе на кассе в магазине
+; По умолчанию false
+checkUserAccess = <%= @checkUserAccess %>
+
+; Запрещать сканирование данных в диалоге
+; По умолчанию false
+forbidScanInDialog = <%= @forbidScanInDialog %>
+
+
+[Shift.Duration]
+; Настройки длительности смены
+
+; Лимит длительности смены задается в формате чч:мм, по умолчанию 23:55.
+limit = <%= @shift_Duration_limit %>
+
+; Период в минутах в течение, которого выдается предупреждение о приближении окончаия смены
+; по умолчанию 15 минут
+alarmTimeout = <%= @shift_Duration_alarmTimeout %>
+
+; включить контроль длительности смены, по умолчанию контроль длительности используется
+enableLimit = <%= @shift_Duration_enableLimit %>
+
+; включить контроль смены в пределах одного дня при включенном контроле длительности смены
+; если день, в который была открыта смена, закончился, то выдается предупреждение о необходимости закрытия смены
+; по умолчанию контроль смены в пределах одного дня не используется
+; если настройка financecontrol = on, то данная настройка игнорируется
+; для корректной работы необходимо включить возможность закрытия нулевых смен(closeNotOpenedShift = true)
+shiftInOneDay = <%= @shift_Duration_shiftInOneDay %>
+
+[WorkDay.Duration]
+; Установка продолжительности рабочего дня.
+; Если workDayBegin больше workDayEnd,
+; то считем что рабочий день начинается в текущих сутках, а заканчивается на следующие.
+; Если wordDayBegin меньше workDayEnd,
+; то считаем что рабочий день расположен в пределах одних суток
+
+; включение/выключение контроля рабочего дня(по умолчанию false)
+enableLimit = <%= @workDay_Duration_enableLimit %>
+
+; начало рабочего дня(по умолчанию 00:00)
+workDayBegin = <%= @workDay_Duration_workDayBegin %>
+
+; окончание рабочего дня (по умолчанию 23:59:59:999)
+workDayEnd = <%= @workDay_Duration_workDayEnd %>
+
+; Период в течение которого выдается предупреждение о приближении окончания рабочего дня
+; по умолчанию 15 минут
+alarmTimeout = <%= @workDay_Duration_alarmTimeout %>
+
+
+[HW.LOCKTIMER]
+; Настройки таймера автоматической блокировки
+; срабатывает если программа не используется в течении заданного временного интервала
+
+; таймаут (в секундах) по умолчанию 300 (5 мин.).
+timeout = <%= @hw_locktimer_timeout %>;

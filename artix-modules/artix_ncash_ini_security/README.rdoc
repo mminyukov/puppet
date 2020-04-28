@@ -1,0 +1,8 @@
+=== Описание
+Настройки основного конфигурационнго файла ncash.ini секции
+1) [Security.Restrictions]
+2) [Shift.Duration]
+3) [WorkDay.Duration]
+4) [HW.LOCKTIMER]
+
+Документация: http://docs.artix.su/pages/viewpage.action?pageId=16024275

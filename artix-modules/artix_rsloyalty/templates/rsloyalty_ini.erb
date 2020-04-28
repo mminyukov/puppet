@@ -1,0 +1,35 @@
+;-- Файл был сгенерирован сервером puppet
+
+[plugins]
+; Система лояльности RS.Loyalty
+rsloyalty = <%= @rsloyalty_discAndBonusEnable %>
+
+; Система сертификатов RS.Loyalty
+rsloyaltycertificate = <%= @rsloyalty_certificateEnable %>
+
+[RSLoyalty]
+; Настройки плагина системы лояльности RS.Loyalty
+
+; Адреса серверов RS.Loyalty по убыванию приоритета
+; Значение по умолчанию http://127.0.0.1/
+hosts = "<%= @rsloyalty_hosts %>"
+
+; Таймаут запроса к серверу RS.Loyalty
+; Значение по умолчанию 5
+timeout = <%= @rsloyalty_timeout %>
+
+; Имя пользователя для авторизации на сервере
+; Значение по умолчанию ""
+user = "<%= @rsloyalty_user %>"
+
+; Пароль пользователя для авторизации на сервере
+; Значение по умолчанию ""
+password = "<%= @rsloyalty_password %>"
+
+; Префикс для купонов на чек
+; Значение по умолчанию "rsloyalty"
+checkCouponPrefix = "<%= @rsloyalty_checkCouponPrefix %>"
+
+; Префикс для купонов на позицию
+; Значение по умолчанию "rsloyalty"
+positionCouponPrefix= "<%= @rsloyalty_positionCouponPrefix %>"

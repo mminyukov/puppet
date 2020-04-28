@@ -1,0 +1,45 @@
+;Файл был сгенерирован сервером puppet
+[plugins]
+; Модуль "Платежи"
+paygate = <%= @paygate_enable %>
+
+[Processing.Paygate]
+; Настройка приема платежей
+
+; Адреса шлюзов
+; hosts = 192.169.1.51:8080,192.169.6.11:7700,192.169.6.5:7700
+hosts = <%= @paygate_hosts %>
+
+; Пользователь
+; user=user
+user = <%= @paygate_user %>
+
+; Пароль
+; password=user
+password = <%= @paygate_password %>
+
+; Код позиции платежа
+; paymentCode = 877887
+paymentCode = <%= @paygate_paymentCode %>
+
+; ШК позиции платежа
+; paymentBcode = 655698
+paymentBcode = <%= @paygate_paymentBcode %>
+
+; Отдел для платежей
+; paymentDepartment = 5
+paymentDepartment = <%= @paygate_paymentDepartment %>
+
+; Количество попыток получения результата проверки платежа, между попытками 1 секунда (по умолчанию 15)
+; checkAttempts = 15
+checkAttempts = <%= @paygate_checkAttemts %>
+
+; Таймаут обращения к серверу. По умолчанию 5 секунд
+timeout = <%= @paygate_timeout %>
+
+; Печатать чек подтверждения привязки номера к карте, по умолчанию true
+printBindVerification = <%= @paygate_printBindVerification %>
+
+; Признак предмета расчета. По умолчанию 1
+paymentObject = <%= @paygate_paymentObject %>
+

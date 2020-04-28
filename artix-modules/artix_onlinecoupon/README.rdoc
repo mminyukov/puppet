@@ -1,0 +1,4 @@
+=== Описание
+Настройка плагина онлайн-купонов
+
+Документация: http://docs.artix.su/pages/viewpage.action?pageId=12457878

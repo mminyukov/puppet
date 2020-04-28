@@ -1,0 +1,4 @@
+=== Описание
+Настройки модуля personalDiscount
+
+Документация: http://docs.artix.su/pages/viewpage.action?pageId=16714511

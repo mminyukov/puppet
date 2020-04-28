@@ -1,0 +1,13 @@
+[SoftCheck]
+; Тип движка для работы с софт-чеками. Файловый или по rest протоколу. Возможные значения: file, rest.
+
+; По умолчанию file
+engine = <%= @softcheck_engine %>
+
+; Путь до софт чеков
+;path = http://192.168.0.1:8080/CSrest/rest/
+path = <%= @softcheck_path %>
+
+; Таймаут ожидания ответа от сервера
+; По умолчанию 10 секунд
+timeout = <%= @softcheck_timeout %>

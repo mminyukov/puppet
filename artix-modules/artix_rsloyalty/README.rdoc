@@ -1,0 +1,7 @@
+=== Описание
+Настройка модуля RSloyalty
+
+Документация: http://docs.artix.su/display/ArtixDoc46/RS.Loyalty
+
+
+

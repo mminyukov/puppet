@@ -1,0 +1,4 @@
+=== Описание
+Настройка модуля работы с софт-чеками
+
+Документация: http://docs.artix.su/pages/viewpage.action?pageId=12454488

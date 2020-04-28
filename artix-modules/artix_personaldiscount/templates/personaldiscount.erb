@@ -1,0 +1,21 @@
+;Файл был сгенерирован сервером puppet
+[plugins]
+; Персональная скидка
+personalDiscount = <%= @personaldiscount_enable %>
+
+[PersonalDiscount]
+; Настройка плагина персональной скидки
+
+; Имя хоста
+host = <%= @personaldiscount_host %>
+
+; Номер порта
+port = <%= @personaldiscount_port %>
+
+timeout = <%= @personaldiscount_timeout %>
+
+; Логин
+user = <%= @personaldiscount_user %>
+
+; Пароль
+password = <%= @personaldiscount_password %>

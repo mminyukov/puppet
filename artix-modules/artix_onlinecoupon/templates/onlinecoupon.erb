@@ -1,0 +1,21 @@
+;Файл был сгенерирован сервером puppet
+[plugins]
+;Онлайн-купоны
+onlineCoupon = <%= @onlinecoupon_enable %>
+
+[OnlineCoupon]
+; Настройка плагина онлайн купонов
+; Префикс онлайн купона
+; для штрих-кода в формате EAN13 не более 3 цифр
+prefix = <%= @onlinecoupon_prefix %>
+
+; Адрес сервера онлайн купонов
+host = <%= @onlinecoupon_host %>
+
+; Порт
+port = <%= @onlinecoupon_port %>
+
+; Таймаут запроса к серверу онлайн купонов
+; значение по умолчанию 5
+timeout = <%= @onlinecoupon_timeout %>
+

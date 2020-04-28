@@ -1,0 +1,5 @@
+=== Описание
+Настройки клавиатуры сканеров и редеров
+
+Документация: http://docs.artix.su/pages/viewpage.action?pageId=11043206
+              http://docs.artix.su/pages/viewpage.action?pageId=11043205

@@ -1,0 +1,4 @@
+=== Описание
+Настройки модуля "Призма"
+
+Документация: http://docs.artix.su/pages/viewpage.action?pageId=9142431

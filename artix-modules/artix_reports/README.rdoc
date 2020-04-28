@@ -1,0 +1,9 @@
+=== Описание
+Данный модуль отвечает за распрастранение шаблонов документов из директории puppet в директорию /linuxcash/cash/reports/
+
+Документация: http://docs.artix.su/pages/viewpage.action?pageId=14157212
+
+
+
+
+

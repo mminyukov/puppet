@@ -1,0 +1,115 @@
+;-- Файл был сгенерирован сервером puppet
+[Misc]
+; Разное ;
+
+; Запрашивать причину возврата для возврата и возврата по чеку
+; по умолчанию false
+requestReasonInBackCheck = <%= @requestReasonInBackCheck %>
+
+; Отображать сумму в денежном ящике при выеме, по умолчанию true
+showCashDrawerSum = <%= @showCashDrawerSum %>
+
+; Вычислять остатки. По умолчанию остатки не вычисляются ;
+calculateRemainsOfGoods = <%= @calculateRemainsOfGoods %>.
+
+; По умолчанию false ;
+considerRemainsOfGoods = <%= @considerRemainsOfGoods %>
+
+; Уведомление звуковым сигналом об ошибках при добавлении товара в чек. По умолчанию no ;
+beepNotification = "<%= @beepNotification %>";
+
+; Режим разнесения сумм по отделам при возврате в чек продажи;
+bsDeptMode = "<%= @bsDeptMode %>";
+
+; Наименование фискальной позиции в чеке. По умолчанию "РЕГИСТРАЦИЯ ПЛАТЕЖА" ;
+fiscalPositionName = "<%= @fiscalPositionName %>";
+
+; Запрет перехода в режим продажи без внесения денежных средств ;
+; По умолчанию false ;
+requiredMoneyIn = <%= @requiredMoneyIn %>
+
+; Позволять закрывать не открытую смену. По умолчанию false ;
+closeNotOpenedShift = <%= @closeNotOpenedShift %>
+
+; Открывать смену в ФР при открытии чека
+; По умолчанию false
+openShiftInFrOnOpenCheck = <%= @openShiftInFrOnOpenCheck %>
+
+; Открывать смену в ФР сразу после открытия смены в кассе
+; По умолчанию false
+openShiftInFrAfterOpenInCash = <%= @openShiftInFrAfterOpenInCash %>
+
+; Проверять расхождение времени между программой и ФР ;
+; По умолчанию true ;
+checkTimeDiscrepancy = <%= @checkTimeDiscrepancy %>
+
+; Устанавливать время вручную. Работает, если  в программе закрыта смена
+; true - устанавливать время на кассе и ККМ вручную, false - нет. По умолчанию false
+setTimeManually = <%= @setTimeManually %>
+
+; Показывать сообщение с предупреждением кассира о приблежении времени ,блокировки продажи алкоголя.;
+; Указывается время в минутах. По умолчанию 0 мин.;
+alcoholCaution = <%= @alcoholCaution %>
+
+; Обязательный ввод штрихкода при продаже и возврате по свободной цене
+; По умолчанию false
+inputBarcodeInFreeSaleSum = <%= @inputBarcodeInFreeSaleSum %>
+
+; Умножать кол-во из модификатора на кол-во из ШК (если задано), иначе на кол-во
+; по-умолчанию (если задано). По умолчанию false
+multipleModifierQuant = <%= @multipleModifierQuant %>
+
+; Переносить остаток наличных во входящий остаток следующей смены ;
+; По умолчанию false ;
+depositOnNextShift = <%= @depositOnNextShift %>
+
+; Блокировать работу кассы при расхождении сумм. По умолчанию false -не блокировать
+blockWorkOfBadCounters = <%= @blockWorkOfBadCounters %>
+
+; Количество непереданных в ОФД чеков, после которого
+; показывать предупреждение кассиру(0 - не показываеть предупреждение)
+alarmUnsendMessageCount = <%= @alarmUnsendMessageCount %>;
+
+; Интервал вывода предупреждения о непереданных в ОФД чеках
+; (1-каждый чек, 5 - каждый пятый чек) По умолчанию каждый чек
+alarmUnsendMessageStep = <%= @alarmUnsendMessageStep %>
+
+;Количество дней с момента отправки последнего чека в ОФД
+;по истечении которых выводится уведомление об отсутствии связи с ОФД и количестве дней до блокировки кассы
+;(по умолчанию notifyAfterDaysFromLastSentCheck = -1 - данная настройка не используется)
+notifyAfterDaysFromLastSentCheck = <%= @notifyAfterDaysFromLastSentCheck %>
+
+; Запрашивать баланс бонусной карты с сервера
+; true - только при необходимости (запрос информации о карте, оплата бонусами), false - при добавлении карты в чек
+requestСardBalanceIfNecessary = <%= @requestCardBalanceIfNecessary %>
+
+; Показывать кассиру диалог после печати чека
+; По умолчанию - false
+showDialogAfterPrinting = <%= @showDialogAfterPrinting %>
+
+; Использовать правила интерпретации штрих-кодов при считывании карты через ридер
+; true - использовать, false - нет. По умолчанию false
+useBcodeParserForMsrData = <%= @useBcodeParserForMsrData %>
+
+;префикс зашифрованного номера купона
+prefixForEncryptedCoupon = <%= @prefixForEncryptedCoupon %>
+
+; Запретить вход в демонстрационный режим при возникновении проблем с лицензией
+; По умолчанию false
+disableDemoMode = <%= @disableDemoMode %>
+
+; Запрещать закрывать смену при замене ФР
+; По умолчанию false
+forbidCloseShiftOnChangeKkm = <%= @forbidCloseShiftOnChangeKkm %>
+
+; Игнорировать признак товара "Обязательный ввод количества вручную"
+; По умолчанию false
+ignoreRequireQuantityManual = <%= @ignoreRequireQuantityManual %>
+
+; Игнорировать признак товара "Обязателен ввод количества с весов" при получении количества из штрих-кода
+; По умолчанию false
+ignoreRequireQuantityScales = <%= @ignoreRequireQuantityScales %>
+
+; Игнорировать минимальную цену товара, при вводе цены вручную
+; По умолчанию false
+ignoreMinPriceWhenInputPriceManual = <%= @ignoreMinPriceWhenInputPriceManual %>
