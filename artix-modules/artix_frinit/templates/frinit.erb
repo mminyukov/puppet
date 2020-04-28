@@ -1,0 +1,52 @@
+; Файл был сгенерирован сервером puppet
+[frinit]
+; Интерактивный режим. Показывать диалоги.
+interact = <%= @interact %> ; {true, false}
+
+; Режим синхронизации времени
+synctime = <%= @synctime %> ; {no, fromcashtofr, fromfrtocash}
+
+; Файл параметров ФР
+inifile = <%= @inifile %>
+
+; Программирование клише
+setcliche = <%= @setcliche %> ; {true, false}
+
+; Программирование графического клише. По умолчанию false
+setGraphicCliche = <%= @setGraphicCliche %> ; {true, false}
+
+; Программирование рекламного текста
+settail = <%= @settail %> ; {true, false}
+
+; Программирование параметров ФР по умолчанию
+setparams = <%= @setparams %> ; {true, false}
+
+; Программирование дополнительных параметров ФР
+setparamsext = <%= @setparamsext %> ; {true, false}
+
+; Загружать клише и подвал чека из отдельных файлов
+; /linuxcash/cash/conf/cliche<_Номер ФР>.txt - файлы клише
+; /linuxcash/cash/conf/tail<_Номер ФР>.txt - файлы подвалов
+; <_Номер ФР> в имени файла может отсутствовать
+; Выключено по-умолчанию
+useSeparateClicheAndTail = <%= @useSeparateClicheAndTail %> ; {true, false}
+
+; Файл графического клише
+graphicClicheFile = <%= @graphicClicheFile %>
+
+; Загрузка шрифта в ФР
+; По умолчанию - false
+loadFont = <%= @loadFont %>
+
+; Файл шрифта для загрузки в ФР
+fontFile = <%= @fontFile %>
+
+; Программирование шаблона чека. По умолчанию false
+setCheckTemplate = <%= @setCheckTemplate %>
+
+; Файл шаблона чека для программирования
+checkTemplateFile = <%= @checkTemplateFile %>
+
+; Номер шаблона чека для программирования
+checkTemplateNumber = <%= @checkTemplateNumber %>
+

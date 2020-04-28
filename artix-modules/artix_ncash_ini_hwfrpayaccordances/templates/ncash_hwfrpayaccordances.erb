@@ -1,0 +1,52 @@
+;-- Файл был сгенерирован сервером puppet
+<% if @enableMultiFr %>
+<% if @hwfr_One_payaccordances != [] -%>
+[HW.FR.1.PayAccordance]
+<% @hwfr_One_payaccordances.each do |hwfronepayaccordance| -%>
+<%= hwfronepayaccordance %>
+<% end -%><% end -%>
+
+<% if @hwfr_Two_payaccordances != [] -%>
+[HW.FR.2.PayAccordance]
+<% @hwfr_Two_payaccordances.each do |hwfrtwopayaccordance| -%>
+<%= hwfrtwopayaccordance %>
+<% end -%><% end -%>
+
+<% if @hwfr_Three_payaccordances != [] -%>
+[HW.FR.3.PayAccordance]
+<% @hwfr_Three_payaccordances.each do |hwfrthreepayaccordance| -%>
+<%= hwfrthreepayaccordance %>
+<% end -%><% end -%>
+
+<% if @hwfr_Four_payaccordances != [] -%>
+[HW.FR.4.PayAccordance]
+<% @hwfr_Four_payaccordances.each do |hwfrfourpayaccordance| -%>
+<%= hwfrfourpayaccordance %>
+<% end -%><% end -%>
+
+<% if @hwfr_Five_payaccordances != [] -%>
+[HW.FR.5.PayAccordance]
+<% @hwfr_Five_payaccordances.each do |hwfrfivepayaccordance| -%>
+<%= hwfrfivepayaccordance %>
+<% end -%><% end -%>
+
+<% if @hwfr_Six_payaccordances != [] -%>
+[HW.FR.6.PayAccordance]
+<% @hwfr_Six_payaccordances.each do |hwfrsixpayaccordance| -%>
+<%= hwfrsixpayaccordance %>
+<% end -%><% end -%>
+
+<% if @hwfr_Seven_payaccordances != [] -%>
+[HW.FR.7.PayAccordance]
+<% @hwfr_Seven_payaccordances.each do |hwfrsevenpayaccordance| -%>
+<%= hwfrsevenpayaccordance %>
+<% end -%><% end -%>
+<% else %>
+[HW.FR.PayAccordance]
+;
+; Соотнесение логических типов оплаты и типов оплаты ФР
+;
+<% @hwfrpayaccordances.each do |hwfrpayaccordance| -%>
+<%= hwfrpayaccordance %>
+<% end -%>
+<% end -%>

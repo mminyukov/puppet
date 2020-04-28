@@ -1,0 +1,52 @@
+;-- Файл был сгенерирован сервером puppet
+<% if @enableMultiFr %>
+<% if @hwfr_One_Departmappings != [] -%>
+[HW.FR.1.DepartMapping]
+<% @hwfr_One_Departmappings.each do |hwfronedepartmapping| -%>
+<%= hwfronedepartmapping %>
+<% end -%><% end -%>
+
+<% if @hwfr_Two_Departmappings != [] -%>
+[HW.FR.2.DepartMapping]
+<% @hwfr_Two_Departmappings.each do |hwfrtwodepartmapping| -%>
+<%= hwfrtwodepartmapping %>
+<% end -%><% end -%>
+
+<% if @hwfr_Three_Departmappings != [] -%>
+[HW.FR.3.DepartMapping]
+<% @hwfr_Three_Departmappings.each do |hwfrthreedepartmapping| -%>
+<%= hwfrthreedepartmapping %>
+<% end -%><% end -%>
+
+<% if @hwfr_Four_Departmappings != [] -%>
+[HW.FR.4.DepartMapping]
+<% @hwfr_Four_Departmappings.each do |hwfrfourdepartmapping| -%>
+<%= hwfrfourdepartmapping %>
+<% end -%><% end -%>
+
+<% if @hwfr_Five_Departmappings != [] -%>
+[HW.FR.5.DepartMapping]
+<% @hwfr_Five_Departmappings.each do |hwfrfivedepartmapping| -%>
+<%= hwfrfivedepartmapping %>
+<% end -%><% end -%>
+
+<% if @hwfr_Six_Departmappings != [] -%>
+[HW.FR.6.DepartMapping]
+<% @hwfr_Six_Departmappings.each do |hwfrsixdepartmapping| -%>
+<%= hwfrsixdepartmapping %>
+<% end -%><% end -%>
+
+<% if @hwfr_Seven_Departmappings != [] -%>
+[HW.FR.7.DepartMapping]
+<% @hwfr_Seven_Departmappings.each do |hwfrsevendepartmapping| -%>
+<%= hwfrsevendepartmapping %>
+<% end -%><% end -%>
+<% else %>
+[HW.FR.DepartMapping]
+;
+; Соотнесение логических и фискальных отделов для ФР
+;
+<% @hwfrdepartmappings.each do |hwfrdepartmapping| -%>
+<%= hwfrdepartmapping %>
+<% end -%>
+<% end -%>

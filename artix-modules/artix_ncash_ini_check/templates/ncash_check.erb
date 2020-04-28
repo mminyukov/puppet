@@ -1,0 +1,176 @@
+;-- Файл был сгенерирован сервером puppet
+[Check]
+; Настройки чека
+; Шаблон идентификатора чека
+; По умолчанию "%(document.shopCode[04d])%(document.cashCode[02d])%(document.shift[04d])%(document.num[07d])"
+checkIdentifierMask = "<%= @checkIdentifierMask %>"
+
+; Блокировать продажу товара, если минимальная цена больше самой цены
+; По умолчанию false
+disableInventSaleByMinPrice = <%= @disableInventSaleByMinPrice %>
+
+; Количество строчек при печати слипов, текста и т.д.
+; По умолчанию 0
+countLinePrintDoc = <%= @countLinePrintDoc %>
+
+; Максимальное количество печатаемых слипов процессинга
+; При значении -1 печатаются все слипы, при значении 0 слипы не печатаются
+; По умолчанию -1
+countPaymentProcessingSlips = <%= @countPaymentProcessingSlips %>
+
+; Сохранять в БД только первый слип процессинга
+; При значении true сохраняется только первый слип, при значении false все слипы
+; Если в БД пишутся все слипы, то между ними пишется разделитель "\n@\n" для последующей выборки
+; По умолчанию true
+saveFirstPaymentProcessingSlip = <%= @saveFirstPaymentProcessingSlip %>
+
+; Печатать слипы с отказом
+; По умолчанию false
+printFailedPaymentProcessingSlips = <%= @printFailedPaymentProcessingSlips %>
+
+; Использовать "скидку на мелочь"
+; По умолчанию false
+useDiscountOnChange = <%= @useDiscountOnChange %>
+
+; Использовать "надбавку на мелочь" для документов возврата
+; По умолчанию false
+useIncreaseOnChange = <%= @useIncreaseOnChange %>
+
+; Настройка вида распределения скидки "на мелочь" по позициям
+; Возможные значения: proportional(либо true), maxVat, maxSum
+; По умолчанию proportional
+distributeDiscountOnChange = <%= @distributeDiscountOnChange %>
+
+; Точность вычисления скидки "на мелочь"
+; По умолчанию "[0:1]"
+discountOnChangePrecision = "<%= @discountOnChangePrecision %>"
+
+; Игнорировать минимальную цену для скидки на сдачу
+; По умолчанию false
+ignoreMinPriceForDiscountByChange = <%= @ignoreMinPriceForDiscountByChange %>
+
+; Нумерация документов в пределах смены
+; По умолчанию true
+numberingDocumentsByShifts = <%= @numberingDocumentsByShifts %>
+
+; Лимит позиций в чеке
+; По умолчанию -1(нет лимита)
+positionsLimit = <%= @positionsLimit %>
+
+; Код ценовой схемы по умолчанию для позиций
+; По умолчанию 1
+defaultItemPriceType = <%= @defaultItemPriceType %>
+
+; Код ценовой схемы по умолчанию для чека
+; По умолчанию 1
+defaultCheckPriceType = <%= @defaultCheckPriceType %>
+
+; Распределение оплаты чека по нескольким ФР
+; По умолчанию "apportion"
+multiFrPayment = "<%= @multiFrPayment %>"
+
+; Объединение позиций
+; Возможные значения: disable, all, piece
+; По умолчанию disable
+unitePosition = <%= @multiFrPayment %>
+
+; Учитывать штрих-код при объединении
+; По умолчанию true
+checkBarcodeForUnion = <%= @checkBarcodeForUnion %>
+
+; Аннулировать документ только командой "аннулировать документ"
+; По умолчанию false
+cancelDocumentByCommandOnly = <%= @cancelDocumentByCommandOnly %>
+
+; Дополнять штрих-код до 13 символов нулями слева
+; По умолчанию false
+transmitLeadZero = <%= @transmitLeadZero %>
+
+; Пересчитывать скидки в режиме формирования чека
+; По умолчанию true
+recalcDiscInFormingMode = <%= @recalcDiscInFormingMode %>
+
+; Удалять карты при переходе из режима оплаты в режим формирования чека
+; По умолчанию false
+deleteCardByBackFormingMode = <%= @deleteCardByBackFormingMode %>
+
+; Использовать скидку на мелочь только при оплате наличными
+; По умолчанию false
+useDiscountOnChangeForCashPaymentOnly = <%= @useDiscountOnChangeForCashPaymentOnly %>
+
+; Запрет добавления более одной карты в документ
+; По умолчанию false
+onlyOneCard = <%= @onlyOneCard %>
+
+; Разрешить замену добавленной карты
+; По умолчанию false
+allowCardReplace = <%= @allowCardReplace %>
+
+; Использовать базовую валюту при возврате по чеку продажи
+; По умолчанию false
+useBaseValutForBackBySale = <%= @useBaseValutForBackBySale %>
+
+; Редактировать позиции при возврате по чеку продажи
+; При возврате, после выбора чека продажи если значение установлено в true,
+; появляется окно для выбора позиций, которые будут возвращены, и редактирования их количества.
+; Если значение false, то сразу создается чек со всеми позициями (кроме EGAIS и сертификатов)
+; По умолчанию true(редактировать)
+editPositionBackBySale = <%= @editPositionBackBySale %>
+
+; Назначать консультанта на чек или на позицию
+; true - назначать консультанта на весь чек,
+; false - назначать консультанта только на текущую позицию
+; По умолчанию false
+applyConsultantOnCheck = <%= @applyConsultantOnCheck %>
+
+; Разрешать продажу алкогольного товара с акцизной маркой если минимальная цена товара равна 0
+; true - разрешена продажа
+; false - запрещена. Минимальная цена товара с акцизной маркой всегда берется из карточки товара (tmc)
+; По умолчанию true
+allowZeroMinPriceForExciseAlco = <%= @allowZeroMinPriceForExciseAlco %>
+
+; Печатать позиции чека средствами ФР
+; Если настройка включена, то позиции чека будут печататься средствами ФР
+; По умолчанию true
+printPositionsByFr = <%= @printPositionsByFr %>
+
+; Печатать чек даже если добавлен адрес покупателя(true - печатать чек всегда, false - спросить кассира)
+; По умолчанию false
+alwaysPrint = <%= @alwaysPrint %>
+
+; Формат печати наименования позиции в чеке
+; Печатать имя позиции в чеке со штрих-кодом: frPositionMask = "%(frposition.itemBcode[s]) %(frposition.name[s])"
+; По умолчанию "%(frposition.name[s])"
+frPositionMask = "<%= @frPositionMask %>"
+
+; Разбивать платеж по безналичному расчету по нескольким юридическим лицам
+; По умолчанию false
+splitPaymentToMerchants = <%= @splitPaymentToMerchants %>
+
+; Запрет печати копии чека по настройке в валюте
+; По умолчанию false
+forbidValutPrintCopy = <%= @forbidValutPrintCopy %>
+
+; Закрытие чека без ввода суммы
+; По умолчанию true
+autoTotal = <%= @autoTotal %>
+
+; Автоматическое закрытие чека, если последняя оплата является безналичной
+; По умолчанию false
+autoCloseCashless = <%= @autoCloseCashless %>
+
+; Включить принудительный сброс дискового кэша
+; По умолчанию true
+synchroniseImageWithDisk = <%= @synchroniseImageWithDisk %>
+
+; Добавлять позицию по артикулу
+; По умолчанию false
+addPositionByArticul = <%= @addPositionByArticul %>
+
+; Работать в режиме возврата по умолчанию
+; По умолчанию false
+backMode = <%= @backMode %>
+
+; Запретить ввод кода товара вручную в главном окне без команды COMMAND_CODE
+; По умолчанию false
+blockAddPositionManualByCode = <%= @blockAddPositionManualByCode %>

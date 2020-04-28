@@ -1,0 +1,25 @@
+;Файл был сгенерирован сервером puppet
+
+[plugins]
+; Выдача карт на кассе
+cardIssuance = <%= @cardissuance_enable %>
+
+[CardIssuance]
+; URL для обращения к серверу
+url = http://<%= @cardissuance_url %>/v1/issuancecard/cardnumber
+
+; Таймаут соединения в секундах
+; По умолчанию 20
+timeout = <%= @cardissuance_timeout %>
+
+; Вводить ФИО клиента
+; По умолчанию false
+inputName = <%= @cardissuance_inputName %>
+
+; Вводить пол клиента
+; По умолчанию false
+inputSex = <%= @cardissuance_inputSex %>
+
+; Вводить день рождения клиента
+; По умолчанию false
+inputBirthday = <%= @cardissuance_inputBirthday %>

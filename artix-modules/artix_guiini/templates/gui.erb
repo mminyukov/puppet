@@ -1,0 +1,71 @@
+;-- Файл был сгенерирован сервером puppet
+[GUI]
+; Выбор интерфейса для отображения - тачевый, клавиатурный, комбинированный, текстовый (touch, keyboard, combined, tui).
+; По умолчанию keyboard
+interface = <%= @gui_interface %>
+
+; Показывать курсор мыши.
+; По умолчанию false
+showCursor = <%= @guiinterface %>
+
+; Количество знаков после запятой для отображения денежных полей
+; Также влияет на диалоги ввода цены
+; По умолчанию 2
+pricePrecisionToShow = <%= @pricePrecisionToShow %>
+
+; Отображать денежные суммы с разделением трехзначных числовых разрядов
+; Также влияет на диалоги ввода цены
+; По умолчанию false
+priceThousandSeparate = <%= @priceThousandSeparate %>
+
+; Отображать баланс бонусной карты кассиру
+; По умолчанию true
+showBonusBalance = <%= @showBonusBalance %>
+
+; Отображать название группы товара при добавлении позиции
+; По умолчанию false
+showGroupInPositionInfo = <%= @showGroupInPositionInfo %>
+
+; Изменять цвет фона на красный при переходе в режим возврата
+; По умолчанию false
+changeBackgroudColorOnBack = <%= @changeBackgroudColorOnBack %>
+
+; Отображать оповещение "Внимание: требуется контроль возраста" в верхней строке кассовой программы и изменять цвет диалога проверки возраста на красный
+; По умолчанию false
+notableAgeVerify = <%= @notableAgeVerify %>
+
+; Путь до файла с иконкой маркетинговой акции
+marketingActionPixmap = <%= @marketingActionPixmap %>
+
+[UI.DocumentOpenForm.GoodsItems]
+; Параметры отображения позиций на форме открытого документа
+
+; Поля таблицы
+; По умолчанию posnum;№;50;true;132, code;Код;50;false;132, bcode;Штрих-код;180;false;132, name;Наименование;-1;true;129, dept;Отдел;50;false;132, bquant;;-2;true;129, unit;;-2;false;129, price;Цена;100;false;130, sumb;Сумма;-2;true;130, discount;;-2;true;132, tags;;-2;true;132
+fields = "<%= @ui_DocumentOpenForm_GoodsItems %>"
+
+[UI.DocumentPaymentForm.GoodsItems]
+; Параметры отображения позиций на форме оплаты документа
+
+; Поля таблицы
+; По умолчанию posnum;№;50;true;132, code;Код;50;false;132, bcode;Штрих-код;180;false;132, name;Наименование;-1;true;129, dept;Отдел;50;false;132, bquant;;-2;true;129, unit;;-2;false;129, price;Цена;100;false;130, sumb;Сумма;-2;true;130, discount;;-2;true;132, tags;;-2;true;132
+fields = "<%= @ui_DocumentPaymentForm_GoodsItems %>"
+
+[UI.DocumentCloseForm.GoodsItems]
+; Параметры отображения позиций на форме закрытого документа
+
+; Поля таблицы
+; По умолчанию posnum;№;50;true;132, code;Код;50;false;132, bcode;Штрих-код;180;false;132, name;Наименование;-1;true;129, dept;Отдел;50;false;132, bquant;;-2;true;129, unit;;-2;false;129, price;Цена;100;false;130, sumb;Сумма;-2;true;130, discount;;-2;true;132, tags;;-2;true;132
+fields = "<%= @ui_DocumentCloseForm_GoodsItems %>"
+
+[UI.MainWindow.appLogo]
+; Логотип кассы
+
+; Путь до файла с логотипом
+; По умолчанию используется логотип Артикс
+pixmap = <%= @gui_pixmap %>
+
+[UI.AuthenticationForm.Users]
+; Отображение списка пользователей на форме аутентификации
+; По умолчанию true
+visible = <%= @ui_AuthenticationForm_Users_visible %>

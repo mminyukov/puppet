@@ -1,0 +1,5 @@
+=== Описание
+Настройка модуля Loya
+
+Документация: http://docs.artix.su/display/ArtixDoc46/Loya
+

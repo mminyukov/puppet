@@ -1,0 +1,41 @@
+;Файл был сгенерирован сервером puppet
+
+[EGAIS]
+; Включение проверки ЕГАИС, по-умолчанию false.
+enable=<%= @egais_enable %>
+
+; Маска для проверки дополнительного штрихкода, по-умолчанию "[A-Z0-9]{68}".
+barcodeMask="<%= @barcodeMask %>"
+
+; Включить сканирование доп штрихкода DataMatrix. По умолчанию false выключено
+enableAdditionalBarcode = <%= @enableAdditionalBarcode %>
+
+; Маска для проверки штрихкода DataMatrix акцизной марки, по-умолчанию "^(1[0-9]{2}-[0-9]{30}|2[0-9]{2}-[0-9]{29}|0000000)$".
+additionalBarcodeMask = "<%= @additionalBarcodeMask %>"
+
+; Проверять алкокод акцизной марки, по-умолчанию false
+checkAlcoCode = <%= @checkAlcoCode %>
+
+; Проверять акцизные марки на кассе
+enableExciseMarkVerifyLocal = <%= @enableExciseMarkVerifyLocal %>
+
+; Проверять акцизные марки на сервере (по умолчанию false)
+enableExciseMarkVerify = <%= @enableExciseMarkVerify  %>
+
+; URL сервера проверки акцизных марок (по умолчанию http://localhost:8080)
+exciseMarkVerifyUrl = "http://<%= @exciseMarkVerifyUrl %>/CSrest/rest/sales/exciseMark/status"
+
+; Таймаут обращения к серверу проверки акцизных марок в секундах(по умолчанию 30 сек)
+exciseMarkVerifyTimeout =  <%= @exciseMarkVerifyTimeout %>
+
+; Игнорировать ошибки обращения к серверу проверки акцизных марок (по умолчанию true)
+ignoreExciseMarkVerifyErrors = <%= @ignoreExciseMarkVerifyErrors %>
+
+; Отправлять в качестве номеров документа и кассы значения из ФН (по умолчанию true)
+sendFnInfo = <%= @sendFnInfo %>
+
+; Контролировать АМ при инвентаризации
+useExciseMarkInInventory = <%= @useExciseMarkInInventory %>
+
+; Отправлять чек в ЕГАИС перед безналичной оплатой
+sendEgaisBeforeCashlessPayment = <%= @sendEgaisBeforeCashlessPayment %>

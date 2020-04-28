@@ -1,0 +1,39 @@
+;-- Файл был сгенерирован сервером puppet
+
+[plugins]
+manzana = <%= @manzana_enable %>
+
+[Manzana]
+; Настройки плагина системы лояльности Manzana
+
+; Адрес сервера Manzana
+; Значение по умолчанию http://localhost
+url = <%= @manzana_url %>
+
+; Таймаут запроса к серверу Manzana(в секундах)
+; Значение по умолчанию 15
+timeout = <%= @manzana_timeout %>
+
+; Имя пользователя для авторизации на сервере Manzana
+; Значение по умолчанию ""
+user = <%= @manzana_user %>
+
+; Пароль пользователя для авторизации на сервере Manzana
+; Значение по умолчанию ""
+password = <%= @manzana_password %>
+
+; Партнер
+; Значение по умолчанию ""
+organization = <%= @manzana_organization %>
+
+; Идентификатор магазина в CRM
+; Значение по умолчанию ""
+businessUnit =  <%= @manzana_businessUnit %>
+
+; Идентификатор POS в CRM
+; Значение по умолчанию ""
+pos = <%= @manzana_pos %>
+
+; Организация CRM
+; Значение по умолчанию ""
+orgName = <%= @manzana_orgName %>

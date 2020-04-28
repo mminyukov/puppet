@@ -1,0 +1,27 @@
+;-- Файл был сгенерирован сервером puppet
+[plugins]
+moot = <%= @moot_enable %>
+
+[Moot]
+; Настройки плагина мониторинга оборота обувных товаров(обуви)
+
+; Маска для проверки DataMatrix обуви
+; По умолчанию 01\d{14}21[a-zA-Z0-9]{13}240[a-zA-Z0-9]{4}91.{4}92.{88}
+;dataMatrixMask=01\d{14}21[a-zA-Z0-9]{13}240[a-zA-Z0-9]{4}91.{4}92.{88}
+
+; Проверка кодов маркировки на сервере
+; По умолчанию false
+enableMarkVerify=<%= @enableMarkVerify %>
+
+; Url сервера проверки кодов маркировки
+; Для работы с КС используется следующий url "http://'IP-адрес КС':8080/CSrest/rest/sales/exciseMark/status"
+; По умолчанию http://localhost:8080
+markVerifyUrl=http://<%= @markVerifyUrl %>
+
+; Таймаут обращения к серверу проверки кодов маркировки в секундах
+; По умолчанию 30
+markVerifyTimeout=<%= @markVerifyTimeout %>
+
+; Игнорировать ошибки обращения к серверу проверки кодов маркировки
+; По умолчанию true
+ignoreMarkVerifyErrors=<%= @ignoreMarkVerifyErrors %>

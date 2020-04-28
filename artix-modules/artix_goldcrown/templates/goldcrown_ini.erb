@@ -1,0 +1,30 @@
+;-- Файл был сгенерирован сервером puppet
+
+[plugins]
+; Система лояльности Золотая корона
+goldcrown = <%= @goldcrown_bonusEnable %>
+
+; Система сертификатов Золотая корона
+goldcrowncertificate = <%= @goldcrown_certificateEnable %>
+
+[GoldCrown]
+; URL сервера
+serverUrl = <%= @goldcrown_serverUrl %>
+
+; Таймаут соединения в сек(по умолчанию 30)
+timeout=<%= @goldcrown_timeout %>
+
+; Пароль для сертификата
+certificatePassword = <%= @goldcrown_certificatePassword %>
+
+; Путь к сертификату
+certificatePath = <%= @goldcrown_certificatePath %>
+
+; Параметр инфраструктуры партнера
+location = <%= @goldcrown_location %>
+
+; Параметр инфраструктуры партнера
+terminal = <%= @goldcrown_terminal %>
+
+; Параметр инфраструктуры партнера
+partnerId = <%= @goldcrown_partnerId %>

@@ -1,0 +1,53 @@
+class artix_ncash_ini_check (
+  $checkIdentifierMask                    = "%(document.shopCode[04d])%(document.cashCode[02d])%(document.shift[04d])%(document.num[07d])",
+  $disableInventSaleByMinPrice            = false,
+  $countLinePrintDoc                      = "0",
+  $countPaymentProcessingSlips            = "-1",
+  $saveFirstPaymentProcessingSlip         = true,
+  $printFailedPaymentProcessingSlips      = false,
+  $useDiscountOnChange                    = false,
+  $useIncreaseOnChange                    = false,
+  $distributeDiscountOnChange             = "proportional",
+  $discountOnChangePrecision              = "[0:1]",
+  $ignoreMinPriceForDiscountByChange      = false,
+  $numberingDocumentsByShifts             = true,
+  $positionsLimit                         = "250",
+  $defaultItemPriceType                   = "1",
+  $defaultCheckPriceType                  = "1",
+  $multiFrPayment                         = "apportion",
+  $unitePosition                          = "disable",
+  $checkBarcodeForUnion                   = true,
+  $cancelDocumentByCommandOnly            = false,
+  $transmitLeadZero                       = false,
+  $recalcDiscInFormingMode                = true,
+  $deleteCardByBackFormingMode            = false,
+  $useDiscountOnChangeForCashPaymentOnly  = false,
+  $onlyOneCard                            = false,
+  $allowCardReplace                       = false,
+  $useBaseValutForBackBySale              = false,
+  $editPositionBackBySale                 = true,
+  $applyConsultantOnCheck                 = false,
+  $allowZeroMinPriceForExciseAlco         = true,
+  $printPositionsByFr                     = true,
+  $alwaysPrint                            = false,
+  $frPositionMask                         = "%(frposition.name[s])",
+  $splitPaymentToMerchants                = false,
+  $forbidValutPrintCopy                   = false,
+  $autoTotal                              = true,
+  $autoCloseCashless                      = false,
+  $synchroniseImageWithDisk               = true,
+  $addPositionByArticul                   = false,
+  $backMode                               = false,
+  $blockAddPositionManualByCode           = false
+)
+{
+    File {
+        owner => root,
+        group => root,
+        mode  => '0644',
+    }
+    file { "ncash_check.ini" :
+        name    => "/linuxcash/cash/conf/ncash.ini.d/ncash_check.ini",
+        content => template("artix_ncash_ini_check/ncash_check.erb"),
+    }
+}

@@ -1,0 +1,70 @@
+<!-- Файл был сгенерирован сервером puppet -->
+<objects>
+    <object id="ArtixBonus" plugin="/linuxcash/cash/plugins/libArtixBonus.so" >
+    <property name="address">
+        <map>
+            <entry>
+               <key><%= @server_host %></key>
+               <value><%= @server_port %></value>
+            </entry>
+        </map>
+    </property>
+
+    <property name="connectTimeout">
+        <value><%= @connectTimeout %></value>
+    </property>
+
+    <property name="recvTimeout">
+        <value><%= @recvTimeout %></value>
+    </property>
+
+    <property name="sendTimeout">
+        <value><%= @sendTimeout %></value>
+    </property>
+
+    <property name="roundPrecision">
+        <value><%= @roundPrecision %></value>
+    </property>
+
+    <property name="roundModeForEarn">
+        <value><%= @roundModeForEarn %></value>
+    </property>
+
+    <property name="roundPrecisionForSpend">
+        <value><%= @roundPrecisionForSpend %></value>
+    </property>
+
+    <property name="proportionalEarnBonus">
+        <value><%= @proportionalEarnBonus %></value>
+    </property>
+
+    <property name="cancelBonusOnlyOnPosition">
+        <value><%= @cancelBonusOnlyOnPosition %></value>
+    </property>
+
+    <property name="inputClientInfo">
+        <value><%= @inputClientInfo %></value>
+    </property>
+
+   <property name="calculateDummyPoints">
+        <value><%= @calculateDummyPoints %></value>
+    </property>
+
+    <property name="dummyCardNumber">
+        <value><%= @dummyCardNumber %></value>
+    </property>
+
+    <property name="proportionalSpendBonusOnPosition">
+        <value><%= @proportionalSpendBonusOnPosition %></value>
+    </property>
+
+    <property name="cancelEarnBonusWithID">
+        <value><%= @cancelEarnBonusWithID %></value>
+    </property>
+
+    <property name="printDetailedBonusInfo">
+        <value><%= @printDetailedBonusInfo %></value>
+    </property>
+    </object>
+</objects>
+

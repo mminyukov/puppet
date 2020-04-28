@@ -1,0 +1,46 @@
+=== Описание
+
+* Монтирование SMB раздела (без размонтирования) с параметрами по умолчанию
+
+    class { 'artix_autofs' :
+        cifs_login    => 'user',
+        cifs_password => 'password',
+        cifs_host     => '192.168.0.1',
+        cifs_share    => 'share',
+    }
+
+* Удаление пакета autofs и файлов конфигурации
+
+    class { 'artix_autofs' :
+        enable => false,
+    }
+
+=== Кастомизация
+
+* Монтирование SMB раздела с размонтированием
+
+    class { 'artix_autofs' :
+        enable          => true,
+        cifs_enable     => true,
+        cifs_mountpoint => '/linuxcash/net',
+        cifs_timeout    => 300,
+        cifs_key        => 'share',
+        cifs_login      => 'username',
+        cifs_password   => 'password',
+        cifs_host       => '192.168.0.1',
+        cifs_share      => 'folder',
+    }
+
+* Монтирование ресурса FTP
+
+    class { 'artix_autofs' :
+        enable         => true,
+        cifs_enable    => false,
+        ftp_enable     => true,
+        ftp_mountpoint => '/linuxcash/net',
+        ftp_timeout    => 600,
+        ftp_key        => 'ftp',
+        ftp_machine    => '192.168.0.1',
+        ftp_login      => 'user',
+        ftp_password   => 'password',
+    }

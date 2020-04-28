@@ -1,0 +1,4 @@
+=== Описание
+Настройки основного конфигурационнго файла ncash.ini секция [Check]
+
+Документация: http://docs.artix.su/pages/viewpage.action?pageId=16024275

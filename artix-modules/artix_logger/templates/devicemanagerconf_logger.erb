@@ -1,0 +1,12 @@
+[pluginmanager]
+pluginspath=/linuxcash/cash/drivers
+artixxmlspath=/linuxcash/cash/conf/drivers
+netscalexmlspath=/linuxcash/cash/netscale/conf
+
+[Log4Qt]
+Properties\log4j.appender.A1=org.apache.log4j.FileAppender
+Properties\log4j.appender.A1.file=/linuxcash/logs/current/devicemanager.log
+Properties\log4j.appender.A1.appendFile=true
+Properties\log4j.appender.A1.layout=org.apache.log4j.TTCCLayout
+Properties\log4j.appender.A1.layout.DateFormat=ISO8601
+Properties\log4j.rootLogger="<%= @devicemanagerlog %>, A1"

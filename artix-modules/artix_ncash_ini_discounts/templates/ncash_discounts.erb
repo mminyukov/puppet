@@ -1,0 +1,33 @@
+;-- Файл был сгенерирован сервером puppet
+[Discounts]
+;
+; Скидки
+;
+
+; полностью распределять по позициям сумму скидки на чек, по умолачнию скидка распределяется полностью
+distributeReceiptDiscountFully = <%= @distributeReceiptDiscountFully %>
+
+; способ воздействия скидок на чек
+discMode = "<%= @discMode %>";
+
+; способ воздействия скидок на на позицию
+discPositionMode = "<%= @discPositionMode %>";
+
+; отношение скидки на чек к скидке на позиции.
+pos2CheckDiscRel = "<%= @pos2CheckDiscRel %>";
+
+; Объединять позиции в наборах
+; По умолчанию true
+unitePositionsInKit = <%= @unitePositionsInKit %>
+
+; Разрешить использовать доступные баллы частично
+; По умолчанию true
+allowPartialPointsSpend = <%= @allowPartialPointsSpend %>
+
+; Сохранять скидку 0% на позицию в базу данных
+; По умолчанию false
+saveNullDiscountForPosition = <%= @saveNullDiscountForPosition %>
+
+;игнорировать минимальную цену при применении скидки на комплект
+;По умолчанию - игнорируется
+ignoreMinimalPriceForKit = <%= @ignoreMinimalPriceForKit %>;

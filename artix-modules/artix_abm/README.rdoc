@@ -1,0 +1,6 @@
+=== Описание
+Настройка модуля ABMLoyalty
+
+Документация: http://docs.artix.su/display/ArtixDoc46/ABMLoyalty
+
+

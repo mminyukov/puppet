@@ -1,0 +1,13 @@
+=== Описание
+
+* Распространиение файла конфигурации /linuxcash/cash/conf/bcode.ini через копирование файла с fileserver
+
+    class artix_bcode (
+        $copy_file_enable = true,
+    )
+
+* Распространиение файла конфигурации /linuxcash/cash/conf/bcode.ini через указание параметра
+
+    class artix_bcode (
+        $rules = [],
+    )

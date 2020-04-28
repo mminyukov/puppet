@@ -1,0 +1,44 @@
+<!-- Файл был сгенерирован сервером puppet -->
+<objects>
+    <object id="ArtixCertificate" plugin="/linuxcash/cash/plugins/libArtixCertificate.so" >
+       <property name="address">
+           <map>
+             <entry>
+                <key><%= @server_host %></key>
+                <value><%= @server_port %></value>
+             </entry>
+          </map>
+       </property>
+
+       <property name="connectTimeout">
+          <value><%= @connectTimeout %></value>
+       </property>
+
+        <property name="recvTimeout">
+            <value><%= @recvTimeout %></value>
+        </property>
+
+        <property name="sendTimeout">
+            <value><%= @sendTimeout %></value>
+        </property>
+
+        <property name="useCertificateAsDiscount">
+            <value><%= @useCertificateAsDiscount %></value>
+        </property>
+
+        <property name="onlineSaleCertificates">
+            <value><%= @onlineSaleCertificates %></value>
+        </property>
+
+        <property name="sellFullCertificates">
+            <value><%= @sellFullCertificates %></value>
+        </property>
+
+        <property name="checkCertificateStatus">
+            <value><%= @checkCertificateStatus %></value>
+        </property>
+
+    </object>
+</objects>
+
+

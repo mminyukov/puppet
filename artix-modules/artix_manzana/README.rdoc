@@ -1,0 +1,4 @@
+=== Описание
+Активация и настройка модуля системы лояльности Manzana Loyalty
+
+Документация: http://docs.artix.su/display/ArtixDoc46/Manzana+Loyalty

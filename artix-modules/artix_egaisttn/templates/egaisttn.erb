@@ -1,0 +1,49 @@
+;Файл был сгенерирован сервером puppet
+[plugins]
+;Подключаемые модули
+;on-модуль включен,off-выключен.
+;по умолчанию все модули выключены
+
+;Модуль"Работа с ТТН ЕГАИС"
+egaisTTN = <%= @egaisttn_enable %>
+
+[EgaisTTN.excise]
+; ТТН для крепкого алкаголя
+
+; Идентификатор организации в ФС РАР.
+fsrarId = "<%= @excise_fsrarId %>"
+
+; Адрес для запроса документов
+;addressTTN="http://localhost:8080/opt/out?refresh=true"
+addressTTN = "<%= @excise_addressTTN %>"
+
+; Адрес для отправки актов
+;addressAct="http://localhost:8080/opt/in/WayBillAct"
+addressAct = "<%= @excise_addressAct %>"
+
+; Таймаут соединения с ЕГАИС в сек(по умолчанию 30)
+timeout = <%= @excise_timeout %>
+
+; Удалять ли документы из ЕГАИС после отправки акта (по умолчанию false)
+removeDocumentsFromEgais = <%= @excise_removeDocumentsFromEgais %>
+
+[EgaisTTN.nonexcise]
+; ТТН для не крепкого алкаголя
+
+; Идентификатор организации в ФС РАР.
+;fsrarId="00000000000"
+fsrarId = "<%= @nonexcise_fsrarId %>"
+
+; Адрес для запроса документов
+;addressTTN="http://localhost:8080/opt/out?refresh=true"
+addressTTN = "<%= @nonexcise_addressTTN %>"
+
+; Адрес для отправки актов
+;addressAct="http://localhost:8080/opt/in/WayBillAct"
+addressAct = "<%= @nonexcise_addressAct %>"
+
+; Таймаут соединения с ЕГАИС в сек(по умолчанию 30)
+timeout = <%= @nonexcise_timeout %>
+
+; Удалять ли документы из ЕГАИС после отправки акта (по умолчанию false)
+removeDocumentsFromEgais =  <%= @nonexcise_removeDocumentsFromEgais %>

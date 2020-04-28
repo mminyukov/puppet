@@ -1,0 +1,7 @@
+=== Описание
+Графический интерфейс пользователя (GUI)
+
+Документация: http://docs.artix.su/pages/viewpage.action?pageId=11043217
+
+
+

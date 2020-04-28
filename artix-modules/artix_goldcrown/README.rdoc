@@ -1,0 +1,5 @@
+=== Описание
+Настройка модуля goldcrown
+
+Документация: http://docs.artix.su/pages/viewpage.action?pageId=18384624
+

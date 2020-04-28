@@ -1,0 +1,4 @@
+=== Описание
+Необходим для настройки artix_certificate.xml
+
+Документация: http://docs.artix.su/pages/viewpage.action?pageId=12454041

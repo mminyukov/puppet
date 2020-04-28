@@ -1,0 +1,5 @@
+=== Описание
+Настройка модуля "Отложенные чеки"
+
+Документация: http://docs.artix.su/pages/viewpage.action?pageId=16417051
+

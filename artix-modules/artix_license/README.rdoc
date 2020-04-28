@@ -1,0 +1,8 @@
+=== Описание
+Лицензирование кассы происходит с помощью копирования файлов из директории puppet в директорию /linuxcash/cash/licens
+
+Документация: http://docs.artix.su/pages/viewpage.action?pageId=11044519
+
+
+
+

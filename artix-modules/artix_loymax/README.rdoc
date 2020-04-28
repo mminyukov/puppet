@@ -1,0 +1,6 @@
+=== Описание
+Настройка модуля Loymax
+
+Документация: http://docs.artix.su/display/ArtixDoc46/Loymax
+
+

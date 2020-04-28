@@ -1,0 +1,32 @@
+[Log4Qt]
+
+Properties\log4j.appender.root=org.apache.log4j.FileAppender
+Properties\log4j.appender.root.file=/linuxcash/logs/current/terminal.log
+Properties\log4j.appender.root.appendFile=true
+Properties\log4j.appender.root.layout=org.apache.log4j.TTCCLayout
+Properties\log4j.appender.root.layout.DateFormat=ISO8601
+Properties\log4j.rootLogger="<%= @terminallog  %>, root"
+
+Properties\log4j.appender.frd=org.apache.log4j.FileAppender
+Properties\log4j.appender.frd.file=/linuxcash/logs/current/frdriver.log
+Properties\log4j.appender.frd.appendFile=true
+Properties\log4j.appender.frd.layout=org.apache.log4j.TTCCLayout
+Properties\log4j.appender.frd.layout.DateFormat=ISO8601
+Properties\log4j.additivity.frdriver=false
+Properties\log4j.logger.frdriver="<% @frdriverlog %>, frd"
+
+Properties\log4j.appender.action=org.apache.log4j.FileAppender
+Properties\log4j.appender.action.file=/linuxcash/logs/current/actionlog.log
+Properties\log4j.appender.action.appendFile=true
+Properties\log4j.appender.action.layout=org.apache.log4j.TTCCLayout
+Properties\log4j.appender.action.layout.DateFormat=ISO8601
+Properties\log4j.additivity.action=false
+Properties\log4j.logger.action="<%= @actionlog %>, action"
+
+Properties\log4j.appender.rfidreader=org.apache.log4j.FileAppender
+Properties\log4j.appender.rfidreader.file=/linuxcash/logs/current/rfidreader.log
+Properties\log4j.appender.rfidreader.appendFile=true
+Properties\log4j.appender.rfidreader.layout=org.apache.log4j.TTCCLayout
+Properties\log4j.appender.rfidreader.layout.DateFormat=ISO8601
+Properties\log4j.additivity.rfidreader=false
+Properties\log4j.logger.rfidreader="<%= @rfidreaderlog %>, rfidreader"

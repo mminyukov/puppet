@@ -1,0 +1,19 @@
+;Файл был сгенерирован сервером puppet
+[plugins]
+; Отложенные чеки
+deferredCheck = <%= @deferredCheck_enable %>
+
+[DeferredCheck]
+; Настройки модуля "Отложенный чек"
+
+; URL сервиса хранения отложенных чеков
+url = http://<%= @deferredcheck_url %>/CSrest/rest/dictionaries
+
+; Таймаут ожидания ответа от сервера
+; По умолчанию 10 секунд
+timeout = <%= @deferredCheck_timeout %>
+
+; Режим при котором на кассе можно только отклатывать чеки. По умолчанию false
+onlyDeferredMode = <%= @deferredcheck_onlyDeferredMode %>
+
+

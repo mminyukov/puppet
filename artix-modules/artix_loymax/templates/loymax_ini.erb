@@ -1,0 +1,27 @@
+;-- Файл был сгенерирован сервером puppet
+
+[plugins]
+; Система лояльности Loymax
+loymax = <%= @loymax_enable %>
+
+[Loymax]
+; Настройки плагина системы лояльности Loymax
+; Адрес сервера Loymax
+; Значение по умолчанию http://localhost
+serverUrl = <%= @loymax_serverUrl %>
+
+; Таймаут запроса к серверу Loymax(в секундах)
+; Значение по умолчанию 30
+timeout = <%= @loymax_timeout %>
+
+; Имя пользователя для авторизации на сервере Loymax
+; Значение по умолчанию ""
+user = <%= @loymax_user %>
+
+; Пароль пользователя для авторизации на сервере Loymax
+; Значение по умолчанию ""
+password = <%= @loymax_password %>
+
+; Логическое имя устройства в системе Loymax
+; Значение по умолчанию ""
+deviceLogicalId = <%= @loymax_deviceLogicalId %>

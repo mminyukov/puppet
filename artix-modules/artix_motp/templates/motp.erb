@@ -1,0 +1,41 @@
+;-- Файл был сгенерирован сервером puppet
+[plugins]
+motp = <%= @motp_enable %>
+
+[Motp]
+; Настройки плагина мониторинга оборота табачной продукции
+
+; Маска для проверки DataMatrix табачной продукции
+; По умолчанию \d{14}.{15}|01\d{14}21.{7}8005\d{6}93.{4}.*
+dataMatrixMask = <%= @motp_dataMatrixMask %>
+
+; Проверять коды маркировки на сервере
+; По умолчанию false
+enableMarkVerify = <%= @motp_enableMarkVerify %>
+
+; Url сервера проверки кодов маркировки
+; Для работы с КС используется следующий url "http://'IP-адрес КС':8080/CSrest/rest/sales/exciseMark/status"
+; По умолчанию http://localhost:8080
+markVerifyUrl = http://<%= @motp_markVerifyUrl %>/CSrest/rest/sales/exciseMark/status
+
+; Таймаут обращения к серверу проверки кодов маркировки в секундах
+; По умолчанию 30
+markVerifyTimeout = <%= @motp_markVerifyTimeout %>
+
+; Игнорировать ошибки обращения к серверу проверки кодов маркировки
+; По умолчанию true
+ignoreMarkVerifyErrors = <%= @motp_ignoreMarkVerifyErrors %>
+
+; Проверять коды маркировки на кассе
+; По умолчанию false
+enableMarkVerifyLocal = <%= @motp_enableMarkVerifyLocal %>
+
+; Добавлять маркированный табак в чек как немаркированный, если признак табачной продукции не задан и ввод происходит по акцизной марке
+; По умолчанию false
+oldTobacco = <%= @motp_oldTobacco %>
+
+; Коэффициент для получения минимальной розничной цены из цены табачной продукции
+; По умолчанию не используется
+minRetailPriceRatio = <%= @motp_minRetailPriceRatio %>
+
+addWithoutScanMark = <%= @motp_addWithoutScanMark %>

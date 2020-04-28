@@ -1,0 +1,4 @@
+=== Описание
+Настройки основного конфигурационнго файла для программирования ФР fr.ini секция [HW.FR.commons.tail]
+
+Документация: http://docs.artix.su/pages/viewpage.action?pageId=18383979
