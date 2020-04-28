@@ -1,0 +1,5 @@
+=== Описание
+Настройка синхронизации времени через ntp
+
+Документация: http://docs.artix.su/pages/viewpage.action?pageId=12452892
+

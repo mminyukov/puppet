@@ -1,0 +1,4 @@
+deb <%= repo %><% if operatingsystemrelease == '10.04' %>/lucid<% else %>/trusty<% end %> artix-<%= version %> <%= components %>
+<% if custom_enable == true  -%>
+deb <%= custom_repo %><% if operatingsystemrelease == '10.04' %>/lucid<% else %>/trusty<% end %> artix-<%= version %> <%= custom_components %>
+<% end -%>

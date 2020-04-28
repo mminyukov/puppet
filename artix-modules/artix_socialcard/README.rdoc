@@ -1,0 +1,4 @@
+=== Описание
+Настройка модуля "Социальная карта"
+
+Документация: http://docs.artix.su/pages/viewpage.action?pageId=12461453

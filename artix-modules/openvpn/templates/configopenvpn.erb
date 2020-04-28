@@ -1,0 +1,15 @@
+client
+dev tun
+proto tcp
+remote <%= @vpn_host %> <%= @vpn_port %>
+resolv-retry infinite
+nobind
+persist-key
+persist-tun
+ca ca.crt
+cert <%= @cert_name %>.crt
+key <%= @cert_name %>.key
+comp-lzo
+log /var/log/openvpn.log
+verb 3
+dh dh1024.pem

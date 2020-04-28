@@ -1,0 +1,23 @@
+;Файл был сгенерирован сервером puppet
+[plugins]
+socialCard = <%= @sc_enable %>
+
+[SocialCard]
+; Настройки модуля "Социальная карта"
+
+; Код валюты, которая используется для оплаты социальных товаров
+; valutCode = 6
+valutCode = <%= @sc_valutCode %>
+
+; Код отдела. Товары из этого отдела воспринимаются как социальные
+; deptCode = 2
+deptCode = <%= @sc_deptCode %>
+
+; Индекс цены, которая назначается социальному товару
+; indexPrice = 5
+indexPrice = <%= @sc_indexPrice %>
+
+; Разрешено начисление бонусов.
+; true - разрешено, false - запрещено. По умолчанию false
+; allowBonusEarn = false
+allowBonusEarn =  <%= @sc_allowBonusEarn %>
