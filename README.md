@@ -1,2 +1,2 @@
-# puppet
-Модули puppet используемые настройки кассового ПО artix до появления ControlCenter.
+# puppet и artix
+Модули puppet используемые для настройки кассового ПО artix до появления ControlCenter.
